@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marquee</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        #top {
+            font-family: 'Akaya Telivigala', cursive;
+        }
+        
+        marquee {
+            border: 1px solid;
+            border-radius: 5px;
+        }
+        
+        .fit {
+            margin: auto;
+            width: 60%;
+            padding: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="top">The Marquee Tag</h1>
+    <hr>
+    <marquee behavior="scroll" direction="left" scrollamount="5" style="border: none; width: 100%;"><img src="https://thumbs.gfycat.com/DisloyalBlaringLeopardseal.webp" alt="boy" width="100px" height="80px"></marquee>
+    <div class="fit">
+
+        <fieldset>
+            <legend>
+                <h3>Behavior-Scroll</h3>
+            </legend>
+            <marquee behavior="scroll" direction="left" width="100%" scrollamount="20">Scroll left speed=20</marquee>
+            <marquee behavior="scroll" direction="right" width="100%">Scroll right</marquee>
+            <marquee behavior="scroll" direction="up" width="100%" height="50px">Scroll up</marquee>
+            <marquee behavior="scroll" direction="down" width="100%" height="50px" bgcolor="sky blue">Scroll down bgcolor=sky blue</marquee>
+        </fieldset>
+        <fieldset>
+            <legend>
+                <h3>Behavior-Slide</h3>
+            </legend>
+            <marquee behavior="slide" direction="left" width="100%" bgcolor="yellow">Slide left</marquee>
+            <marquee behavior="slide" direction="right" width="100%" hspace="20">Slide right hspace=20</marquee>
+            <marquee behavior="slide" direction="up" width="100%" height="50px" bgcolor="orange">Slide up</marquee>
+            <marquee behavior="slide" direction="down" width="100%" height="50px" vspace="20">Slide down vspace=20</marquee>
+        </fieldset>
+        <fieldset>
+            <legend>
+                <h3>Behavior-Alternate</h3>
+            </legend>
+            <marquee behavior="alternate" direction="left" width="100%">Alternate left</marquee>
+            <marquee behavior="alternate" direction="right" width="100%">Alternate right</marquee>
+            <marquee behavior="alternate" direction="up" width="100%" height="100px">Alternate up <img src="https://thumbs.gfycat.com/FlawlessDimpledCaiman.webp" alt="ball" width="30px" height="30px"> ball gif</marquee>
+            <marquee behavior="alternate" direction="down" width="100%" height="50px">Alternate down</marquee>
+        </fieldset>
+    </div>
+</body>
+
+</html>
