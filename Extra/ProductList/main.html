@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+    <style>
+        table {
+            border-spacing: 0px;
+            border: 1px solid black;
+            width: 100%;
+        }
+        
+        th {
+            border: 1px solid black;
+        }
+        
+        td {
+            border: 1px solid black;
+        }
+        
+        .inline {}
+    </style>
+</head>
+
+<body>
+    <h1>Product List</h1>
+
+    <div id="wrapper">
+        <table id="productTable">
+
+            <tr>
+                <th>S. No.</th>
+                <th>Qty.</th>
+                <th>Product name</th>
+                <th>Description</th>
+                <th>Size</th>
+                <th colspan="3">Edit</th>
+            </tr>
+            <tr id="row1">
+                <td>1</td>
+                <td id="qty_row1">20pc</td>
+                <td id="product_row1">Elbow</td>
+                <td id="description_row1">Supreme</td>
+                <td id="size_row1">3inch</td>
+                <div class="inline">
+                    <td colspan="3">
+                        <input type="button" value="Edit" class="edit" id="edit_button1" onclick="edit_row('1')">
+                        <input type="button" value="Save" class="save" id="save_button1" onclick="save_row('1')">
+                        <input type="button" value="Delete" class="delete" onclick="delete_row('1')">
+                    </td>
+                </div>
+
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="text" name="" id="new_qty"></td>
+                <td><input type="text" name="" id="new_product"></td>
+                <td><input type="text" name="" id="new_description"></td>
+                <td><input type="text" name="" id="new_size"></td>
+                <td><input type="button" value="Add Item" class="add" onclick="add_row();"></td>
+            </tr>
+
+        </table>
+    </div>
+
+    <script>
+        function add_row() {
+            var new_qty = document.getElementById("new_qty").value;
+            var new_product = document.getElementById("new_product").value;
+            var new_description = document.getElementById("new_description").value;
+            var new_size = document.getElementById("new_size").value;
+
+            var table = document.getElementById("productTable");
+            var table_len = (table.rows.length) - 1;
+            var row = table.insertRow(table_len).outerHTML = "<tr id='row" + table_len + "'><td>" + table_len + "</td><td id='qty_row" + table_len + "'>" + new_qty + "</td><td id='product_row" + table_len + "'>" + new_product + "</td><td id='description_row" + table_len + "'>" + new_description + "</td><td id='size_row" + table_len + "'>" + new_size + "</td><td><input type='button' value='Edit' class='edit' id='edit_button" + table_len + "' onclick='edit_row(" + table_len + ")'><input type='button' value='Save' class='save' id='save_button" + table_len + "' onclick='save_row(" + table_len + ")'><input type='button' value='Delete' class='delete' onclick='delete_row(" + table_len + ")'></td></tr>"
+
+            document.getElementById("new_qty").value = "";
+            document.getElementById("new_product").value = "";
+            document.getElementById("new_description").value = "";
+            document.getElementById("new_size").value = "";
+
+        }
+
+        function delete_row(no) {
+            document.getElementById("row" + no + "").outerHTML = "";
+        }
+
+        function edit_row(no) {
+            document.getElementById("edit_button" + no + "").style.display = "none";
+            document.getElementById("save_button" + no + "").style.display = "block";
+
+            var qty = document.getElementById("qty_row" + no + "");
+            var product = document.getElementById("product_row" + no + "");
+            var description = document.getElementById("description_row" + no + "");
+            var size = document.getElementById("size_row" + no + "");
+
+            var qty_data = qty.innerHTML;
+            var product_data = product.innerHTML;
+            var description_data = description.innerHTML;
+            var size_data = size.innerHTML;
+
+            qty.innerHTML = "<input type='text' id='qty_text" + no + "' value='" + qty_data + "'>";
+            product.innerHTML = "<input type='text' id='product_text" + no + "' value='" + product_data + "'>";
+            description.innerHTML = "<input type='text' id='description_text" + no + "' value='" + description_data + "'>";
+            size.innerHTML = "<input type='text' id='size_text" + no + "' value='" + size_data + "'>";
+        }
+
+        function save_row(no) {
+            var qty_val = document.getElementById("qty_text" + no).value;
+            var product_val = document.getElementById("product_text" + no).value;
+            var description_val = document.getElementById("description_text" + no).value;
+            var size_val = document.getElementById("size_text" + no).value;
+
+            document.getElementById("qty_row" + no).innerHTML = qty_val;
+            document.getElementById("product_row" + no).innerHTML = product_val;
+            document.getElementById("description_row" + no).innerHTML = description_val;
+            document.getElementById("size_row" + no).innerHTML = size_val;
+
+            document.getElementById("edit_button" + no).style.display = "block";
+            document.getElementById("save_button" + no).style.display = "nome";
+        }
+    </script>
+</body>
+
+</html>
