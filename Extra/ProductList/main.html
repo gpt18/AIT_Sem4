@@ -34,7 +34,8 @@
 
 <body>
     <h1>Product List</h1>
-
+    <button onclick="printPageArea()" id="printpagebutton">Print</button>
+    <hr>
     <div id="wrapper">
         <table id="productTable">
 
@@ -128,6 +129,11 @@
 
             document.getElementById("edit_button" + no).style.display = "block";
             document.getElementById("save_button" + no).style.display = "nome";
+        }
+
+        function printPageArea() {
+            window.print();
+
         }
     </script>
 </body>
