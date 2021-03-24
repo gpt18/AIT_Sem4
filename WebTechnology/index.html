@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Experiment 1: Formatting tags</title>
     <style>
-    * {
+        * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
@@ -73,7 +73,55 @@
         .nav p {
             padding: 0 8px 0 8px;
         }
-    }
+        
+        .index {
+            text-align: center;
+            letter-spacing: 2px;
+            color: red;
+        }
+        
+        .box h2 {
+            border-bottom: 2px solid #3f51b5;
+            padding-bottom: 8px;
+            padding-left: 8px;
+            margin-top: 8px;
+        }
+        
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        
+        .box h2:hover {
+            border-left: 5px solid blue;
+            border-radius: 4px;
+            color: #3f51b5;
+        }
+        
+        a:hover {
+            color: #3f51b5;
+        }
+        
+        footer {
+            width: 100%;
+            height: auto;
+            float: bottom;
+            text-align: center;
+        }
+        
+        .btn a {
+            margin: auto 20px auto 20px;
+            padding: 8px;
+            border: 1px solid #3f51b5;
+            border-radius: 50px;
+            background-color: white;
+            box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 5px 8px 0px rgba(0, 0, 0, 0.14), 0px 1px 14px 0px rgba(0, 0, 0, 0.12);
+        }
+        
+        .btn a:hover {
+            background-color: blue;
+            color: white;
+        }
     </style>
 </head>
 
@@ -82,14 +130,31 @@
         <h1>Experiments: Web Technology</h1>
     </header>
     <div class="nav">
-        <p>name</p>
+        <marquee behavior="scroll" direction="left">
+            <p>Name: Guddu Prajapati | Course: BCA 4sem</p>
+        </marquee>
     </div>
     <main>
         <div class="box">
-            <h2></h2>
+            <h1 class="index">INDEX</h1>
+            <h2><a href="/WebTechnology/e1webtech.html">Experiment 1: Formating tags, image, audio</a></h2>
+            <h2>Experiment 2: Timetable</h2>
+            <h2>Experiment 3: Lists - Ordered and unordered</h2>
+            <h2>Experiment 4: Marquee tag, GIF</h2>
+            <h2>Experiment 5: iframe</h2>
+            <h2>Experiment 6: HTML Phrases - Div, span,em, block quote, mark, abbr, bdo</h2>
+            <h2>Experiment 7: Form</h2>
+            <h2>Experiment 8: Image Maps</h2>
         </div>
     </main>
-
+    <footer>
+        <div class="btn">
+            <a href="">Index</a>
+            <a href="">Back</a>
+            <a href="">Next</a>
+            <a href="">Show code</a>
+        </div>
+    </footer>
 </body>
 
 </html>
