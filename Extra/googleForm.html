@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Google Form</title>
+    <style>
+        * {
+            margin: 0;
+        }
+        
+        body {
+            background-color: #b0d8ef;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        .d1 {
+            border: 1px solid gray;
+            border-radius: 6px;
+            background-color: #ffffff;
+            border-top: 7px solid #5c33ae;
+            padding: 20px;
+            margin: 20px auto 20px auto;
+            width: 50%;
+            box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 1px 14px 0px rgba(0, 0, 0, 0.12);
+        }
+        
+        .r {
+            color: red;
+            margin-top: 1rem;
+        }
+        
+        .d2 {
+            border: 1px solid gray;
+            border-radius: 6px;
+            background-color: #ffffff;
+            padding: 20px;
+            margin: 20px auto 20px auto;
+            width: 50%;
+            box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.1), 0px 1px 14px 0px rgba(0, 0, 0, 0.1);
+        }
+        
+        sup {
+            color: red;
+        }
+        
+        .input {
+            width: 70%;
+            border: none;
+            border-bottom: 1px solid gray;
+            margin-bottom: 10px;
+        }
+        
+        .t {
+            font-size: 16px;
+            font-weight: 550;
+        }
+        
+        p {
+            font-size: 13px;
+            margin-bottom: 1rem;
+            margin-top: 5px;
+        }
+        
+        h1 {
+            margin-bottom: 1rem;
+        }
+        
+        .btn {
+            margin: 20px auto 20px auto;
+            width: 55%;
+        }
+        
+        .btn a {
+            border: 1px solid #5c33ae;
+            background-color: #5c33ae;
+            padding: 5px 8px 5px 8px;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            border-radius: 5px;
+        }
+        
+        .file a {
+            border: 2px solid #5c33ae;
+            text-decoration: none;
+            border-radius: 4px;
+            padding: 6px;
+            font-weight: 500;
+        }
+        
+        .file a:hover {
+            box-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+            background-color: #ada1c562;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="d1">
+        <h1>Open Letter Maker</h1>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi sit ea voluptas est enim excepturi cupiditate. Vel necessitatibus esse, sapiente quaerat.</p>
+        <span class="r">*Required</span>
+    </div>
+    <div class="d2">
+        <div class="t">Full Name<sup>*</sup></div>
+        <p>Your name</p>
+        <input type="text" class="input">
+    </div>
+    <div class="d2">
+        <div class="t">Department<sup>*</sup></div>
+        <p>Your Department</p>
+        <input type="text" class="input">
+    </div>
+    <div class="d2">
+        <div class="t">Photograph<sup>*</sup></div>
+        <p>Your photo</p>
+        <div class="file"><a href=""><i class="fa fa-upload"></i> Send file</a></div>
+    </div>
+    <div class="btn">
+        <a href="">Submit</a>
+    </div>
+</body>
+
+</html>
