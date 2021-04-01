@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700|Google+Sans:400,500|Product+Sans:400&amp;lang=en" nonce="nn-BX9wpgvsKub2FgsgR_w">
+    <style>
+        * {
+            font-family: "Google Sans", Roboto, Arial, Helvetica, sans-serif;
+            box-sizing: border-box;
+        }
+        
+        h1 {
+            font-weight: 500;
+            font-size: 42px;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            margin-bottom: 2vh;
+            padding: 1vh;
+            background-color: #1a73e8;
+            color: white;
+        }
+        
+        input {
+            margin-bottom: 8px;
+        }
+    </style>
+    <script>
+        function getInput() {
+            n = document.getElementById("name").value;
+            p = document.getElementById("post").value;
+            s = document.getElementById("salary").value;
+        }
+
+        function resetField() {
+            document.getElementById("name").value = "";
+            document.getElementById("post").value = "";
+            document.getElementById("salary").value = "";
+        }
+
+        function printData() {
+            alert("I am an alert box!");
+            var n = document.getElementById("name").value;
+            var p = document.getElementById("post").value;
+            var s = document.getElementById("salary").value;
+            document.getElementById("dataHere").outerHTML = "Name: " + n + "<br> Post: " + p + "<br> Salary: ₹" + s;
+        }
+    </script>
+</head>
+
+<body>
+
+    <h1>Java get method:</h1>
+    <form action="" method="get">
+        <label for="name">Your name: <input type="text" id="name" name="name" required></label>
+        <br>
+        <label for="post">Your post: <input type="text" id="post" name="post" required></label>
+        <br>
+        <label for="salary">Your salary: <b>₹ </b><input type="text" id="salary" name="salary" required></label>
+        <br>
+        <input type="button" value="Save" id="submit" onclick="getInput();">
+        <input type="button" value="Reset" id="reset" onclick="resetField();">
+        <input type="button" value="Print" id="print" onclick="printData()">
+    </form>
+    <h1>Java post method:</h1>
+    <p id="dataHere"></p>
+</body>
+
+</html>
