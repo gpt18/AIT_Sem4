@@ -89,7 +89,7 @@
             <div class="display">
                 <input type="text" class="input" id="input">
             </div>
-            <input type="button" class="clear" id="clear" value="C" onclick="clear();">
+            <input type="button" class="clear" id="clear" value="C" onclick="clearInput();">
             <input type="button" class="div" id="div" value="/">
             <input type="button" class="mul" id="mul" value="*">
             <input type="button" class="min" id="min" value="-">
@@ -111,11 +111,13 @@
     </center>
     <script>
         function solver() {
-            document.getElementById("input").value = "worked";
+            var equ = document.getElementById("input").value;
+            var ans = parseFloat(equ);
+            document.getElementById("input").value = "=" + ans;
         }
 
-        function clear() {
-            document.getElementById("input").value = "d";
+        function clearInput() {
+            document.getElementById("input").value = "";
         }
     </script>
 </body>
