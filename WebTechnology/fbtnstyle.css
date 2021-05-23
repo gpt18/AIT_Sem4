@@ -36,8 +36,8 @@
     display: grid;
     height: 100vh;
     gap: 20px;
-    grid-template-rows: auto auto;
-    grid-template-areas: "code" "output";
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "code" "output" "footer";
 }
 
 .code {
@@ -46,11 +46,16 @@
 
 .output {
     grid-area: output;
+    margin-top: 3rem;
+}
+
+#footer {
+    grid-area: footer;
 }
 
 @media (min-width: 720px) {
     .container {
-        grid-template-rows: 1fr;
-        grid-template-areas: "code output";
+        grid-template-rows: 1fr auto;
+        grid-template-areas: "code output" "footer footer";
     }
 }
