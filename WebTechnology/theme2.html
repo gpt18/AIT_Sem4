@@ -26,12 +26,13 @@
         h2,
         h1 {
             margin: 2px;
-            padding: 0 8px 0 8px;
+            padding: 8px;
         }
         
         .header {
             grid-area: header;
             color: white;
+            margin-bottom: 10px;
             background-color: #4158D0;
             background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
         }
@@ -67,9 +68,40 @@
             background-color: white;
         }
         
+        textarea {
+            resize: none;
+            outline: none;
+            width: 100%;
+            height: 100%;
+            font-size: 18px;
+            padding: 10px;
+            border: 2px solid blue;
+        }
+        
+        .output-body {
+            width: 100%;
+        }
+        
+        iframe {
+            border: none;
+        }
+        
         .code-title,
         .output-title {
             color: white;
+            display: flex;
+        }
+        
+        .btn {
+            width: 100px;
+            padding: 0;
+            margin: 4px 0 4px 0;
+            background-color: #31B0D5;
+            border-radius: 4px;
+            border-color: #46b8da;
+            color: white;
+            font-weight: 500;
+            text-shadow: 2px 2px #000;
         }
         
         .code-part {
@@ -79,7 +111,7 @@
         
         .output-part {
             grid-area: o-part;
-            margin: 0 8px 0 8px;
+            margin: 0 14px 0 8px;
         }
         
         .footer {
@@ -123,18 +155,19 @@
         <div class="code-part">
             <div class="code-title">
                 <h2>Code:</h2>
+                <button class="btn" onclick="showPreview()">Run</button>
             </div>
             <div class="code-body">
-                <textarea name="" class="text-area" style="height: 100%; width: 100%;"><!-- body of code --></textarea>
+                <textarea id="htmlCode" placeholder="HTML Code" oninput="showPreview()">hello world!</textarea>
             </div>
         </div>
         <div class="output-part">
             <div class="output-title">
                 <h2>Output:</h2>
             </div>
-            <div class="output-body">
+            <iframe class="output-body" id="preview">
                 <!-- body of output -->
-            </div>
+            </iframe>
         </div>
     </div>
     <div class="footer">
@@ -144,6 +177,35 @@
         </div>
         <div class="home"><a href="#">Index</a></div>
     </div>
+    <script>
+        function showPreview() {
+            var html = document.getElementById("htmlCode").value;
+            var frame = document.getElementById("preview").contentWindow.document;
+            frame.open();
+            frame.write(html);
+            frame.close();
+        }
+        // const first = document.querySelector("textarea");
+        // const iframe = document.querySelector("iframe");
+        // const btn = document.querySelector("button");
+
+        // btn.addEventListener("click", () => {
+        //     var html = first.textContent;
+        //     iframe.src = "data:text/html;charset=utf-8," + encodeURI(html);
+        // });
+
+
+        // first.addEventListener('keyup', () => {
+        //     var html = first.textContent;
+        //     iframe.src = "data:text/html;charset=utf-8," + encodeURI(html);
+        // })
+
+        // first.addEventListener("paste", function(e) {
+        //     e.preventDefault();
+        //     var text = e.clipboardData.getData("text/plain");
+        //     document.execCommand("insertText", false, text);
+        // });
+    </script>
 </body>
 
 </html>
