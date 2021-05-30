@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700|Google+Sans:400,500|Product+Sans:400&amp;lang=en" nonce="nn-BX9wpgvsKub2FgsgR_w">
+
+    <style>
+        * {
+            font-family: "Google Sans", Roboto, Arial, Helvetica, sans-serif;
+            box-sizing: border-box;
+            margin: 0;
+        }
+        
+        h1 {
+            color: white;
+            margin-bottom: 10px;
+            background-color: #4158D0;
+            background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+        }
+        
+        img {
+            width: 300px;
+            height: 300px;
+            height: auto;
+            float: left;
+            margin-bottom: 4px;
+            border-radius: 8px 0 8px 0;
+        }
+        
+        .blur {
+            filter: blur(4px);
+        }
+        
+        .brightness {
+            filter: brightness(0.30);
+        }
+        
+        .contrast {
+            filter: contrast(180%);
+        }
+        
+        .grayscale {
+            filter: grayscale(100%);
+        }
+        
+        .huerotate {
+            filter: hue-rotate(180deg);
+        }
+        
+        .invert {
+            filter: invert(100%);
+        }
+        
+        .opacity {
+            filter: opacity(50%);
+        }
+        
+        .saturate {
+            filter: saturate(7);
+        }
+        
+        .sepia {
+            filter: sepia(100%);
+        }
+        
+        .shadow {
+            filter: drop-shadow(8px 8px 10px green);
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .item {
+            border: 1px solid #dadce0;
+            border-radius: 8px;
+            padding: 10px;
+            margin: 8px;
+        }
+        
+        .head {
+            color: #202124;
+            margin-bottom: 2px;
+            font-family: 'Google Sans', Roboto, Arial, sans-serif;
+            font-size: 1.375rem;
+            font-weight: 400;
+        }
+        
+        .sub {
+            color: #5f6368;
+            letter-spacing: .01428571em;
+            font-family: Roboto, Arial, sans-serif;
+            font-size: .875rem;
+            font-weight: 400;
+            line-height: 1.25rem;
+        }
+        /* input {
+            margin-left: 10px;
+        } */
+    </style>
+</head>
+
+<body>
+    <h1>The filter Property</h1>
+
+    <div class="container">
+        <div class="item">
+            <img class="" src="./photo.png" alt="Pineapple">
+            <div class="tag">
+                <div class="head">Original
+                    <!-- <input type="range" name="" id=""> -->
+                </div>
+                <div class="sub">no filter </div>
+            </div>
+        </div>
+        <div class="item">
+            <img class=" blur" src="./photo.png" alt="Pineapple">
+            <div class="tag">
+                <div class="head">Blur</div>
+                <div class="sub">filter: blur(4px);</div>
+            </div>
+        </div>
+        <div class="item">
+            <img class=" brightness" src="./photo.png" alt="Pineapple">
+            <div class="tag">
+                <div class="head">Brightness</div>
+                <div class="sub">filter: brightness(0.30);</div>
+            </div>
+        </div>
+        <div class="item">
+            <img class=" contrast" src="./photo.png" alt="Pineapple">
+            <div class="tag">
+                <div class="head">Contrast</div>
+                <div class="sub">filter: contrast(180%);</div>
+            </div>
+        </div>
+        <div class="item">
+            <img class=" grayscale" src="./photo.png" alt="Pineapple">
+            <div class="tag">
+                <div class="head">Grayscale</div>
+                <div class="sub">filter: grayscale(100%);</div>
+            </div>
+        </div>
+        <div class="item">
+            <img class=" huerotate" src="./photo.png" alt="Pineapple">
+            <div class="tag">
+                <div class="head">Huerotate</div>
+                <div class="sub"> filter: hue-rotate(180deg);</div>
+            </div>
+        </div>
+        <div class="item">
+            <img class=" invert" src="./photo.png" alt="Pineapple">
+            <div class="tag">
+                <div class="head">Invert</div>
+                <div class="sub">filter: invert(100%);</div>
+            </div>
+        </div>
+        <div class="item">
+            <img class=" opacity" src="./photo.png" alt="Pineapple">
+            <div class="tag">
+                <div class="head">Opacity</div>
+                <div class="sub">filter: opacity(50%);</div>
+            </div>
+        </div>
+        <div class="item">
+            <img class=" saturate" src="./photo.png" alt="Pineapple">
+            <div class="tag">
+                <div class="head">Saturate</div>
+                <div class="sub">filter: saturate(7);</div>
+            </div>
+        </div>
+        <div class="item">
+            <img class=" sepia" src="./photo.png" alt="Pineapple">
+            <div class="tag">
+                <div class="head">Sepia</div>
+                <div class="sub"> filter: sepia(100%);</div>
+            </div>
+        </div>
+        <div class="item">
+            <img class=" shadow" src="./photo.png" alt="Pineapple">
+            <div class="tag">
+                <div class="head">Shadow</div>
+                <div class="sub">filter: drop-shadow(8px 8px 10px green);</div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="head">Updates:</div>
+            <div class="sub">
+                <ul>
+                    <li>adding range slider</li>
+                    <li>live value update on page</li>
+                    <li>black theme</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
