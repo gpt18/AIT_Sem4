@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A2: The Transition Property</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700|Google+Sans:400,500|Product+Sans:400&amp;lang=en" nonce="nn-BX9wpgvsKub2FgsgR_w">
+
+    <style>
+        body {
+            color: white;
+            background-color: #2a2f32;
+        }
+        
+        * {
+            font-family: "Google Sans", Roboto, Arial, Helvetica, sans-serif;
+            box-sizing: border-box;
+            /* border: 1px solid black; */
+            margin: 0;
+        }
+        
+        h1 {
+            padding: 0 0 8px 8px;
+            margin: 0 0 10px 0;
+            color: white;
+            background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+        }
+        
+        img {
+            width: 300px;
+            height: 200px;
+        }
+        
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .tag {
+            padding: 8px;
+        }
+        
+        .unit {
+            padding: 8px;
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+        
+        .unit:hover {
+            color: yellowgreen;
+        }
+        
+        .item {
+            width: 300px;
+            height: 300px;
+            border: 1px solid orange;
+            border-radius: 8px;
+            margin: 8px;
+        }
+        
+        .square {
+            position: relative;
+            top: 25%;
+            left: 33%;
+            background: darkturquoise;
+            border-radius: 5px;
+            height: 100px;
+            transition: transform 1s;
+            width: 100px;
+        }
+        
+        .t1:hover {
+            transform: scale(2);
+        }
+        
+        .t2:hover {
+            transform: rotate(1080deg);
+        }
+        
+        .t3:hover {
+            transform: translate(20px, 20px);
+        }
+        
+        .t4:hover {
+            transform: skewX(-20deg);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>The Transition Property</h1>
+    <div class="unit">CSS transforms </div>
+    <div class="container">
+        <div class="item">
+            <div class="tag">
+                Transformation 1 : Scale up
+            </div>
+            <div class="square t1"></div>
+
+        </div>
+        <div class="item">
+            <div class="tag">
+                Transformation 2 : Rotate
+            </div>
+            <div class="square t2"></div>
+
+        </div>
+        <div class="item">
+            <div class="tag">
+                Transformation 3 : Translate
+            </div>
+            <div class="square t3"></div>
+
+        </div>
+        <div class="item">
+            <div class="tag">
+                Transformation 4 : Skew
+            </div>
+            <div class="square t4"></div>
+
+        </div>
+    </div>
+    <div class="unit">CSS transition </div>
+</body>
+
+</html>
