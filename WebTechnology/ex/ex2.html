@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700|Google+Sans:400,500|Product+Sans:400&amp;lang=en" nonce="nn-BX9wpgvsKub2FgsgR_w">
+    <link rel="stylesheet" href="./themeStyle.css">
+    <title>Ex-2: Time Table</title>
+</head>
+
+<body>
+    <div class="header">
+        <h2>EX-12: title of experiment</h2>
+    </div>
+    <div class="main-container">
+        <div class="code-part">
+            <div class="code-title">
+                <h2>Code:</h2>
+                <button class="btn" onclick="showPreview()">Run</button> &#128072; click here!
+            </div>
+            <div class="code-body">
+                <textarea id="htmlCode" placeholder="HTML Code" oninput="showPreview()"><!DOCTYPE html>
+                    <html lang="en">
+                    
+                    <head>
+                        <meta charset="UTF-8">
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                        <title>Time Table</title>
+                        <link rel="stylesheet" href="fbtnstyle.css">
+                        <style>
+                            * {
+                                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                            }
+                            
+                            h1,
+                            h3 {
+                                text-align: center;
+                            }
+                            
+                            table {
+                                border-spacing: 0px;
+                                table-layout: fixed;
+                                margin-left: auto;
+                                margin-right: auto;
+                            }
+                            
+                            th {
+                                color: green;
+                                border: 1px solid black;
+                                padding: 8px;
+                            }
+                            
+                            td {
+                                border: 1px solid black;
+                                word-break: break-all;
+                                padding: 8px;
+                            }
+                        </style>
+                    </head>
+                    
+                    <body>
+                        <h1>Time Table</h1>
+                        <hr>
+                        <table border="1px" width="650">
+                            <tr>
+                                <td colspan="6">
+                                    <h1 style="text-align: center; margin: 0;">BCA 4th semester</h1>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Days</th>
+                                <th>8:30-10:30</th>
+                                <th>10:30-12:30</th>
+                                <th>12:30-1:00</th>
+                                <th>1:00-3:00</th>
+                                <th>3:00-5:00</th>
+                            </tr>
+                            <tr>
+                                <td><b>Monday</b></td>
+                                <td>MATHS</td>
+                                <td>CN</td>
+                                <td rowspan="6" style="text-align: center; font-weight: bold;">
+                                    <h1>L <br> U <br>N <br>C <br>H</h1>
+                                </td>
+                                <td>WEB TECH</td>
+                                <td>SE</td>
+                            </tr>
+                            <tr>
+                                <td><b>Tuesday</b></td>
+                                <td>NUES</td>
+                                <td>JAVA</td>
+                                <td colspan="2">JAVA LAB GR-1
+                                    <hr color="black"> WEB TECH LAB GR-2
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>Wednesday</b></td>
+                                <td></td>
+                                <td>JAVA</td>
+                                <td colspan="2">WEB TECH GR-1
+                                    <hr color="black"> JAVA GR-2
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>Thrusday</b></td>
+                                <td>MATHS</td>
+                                <td>SE</td>
+                                <td>CN</td>
+                                <td>WEB TECH</td>
+                            </tr>
+                            <tr>
+                                <td><b>Friday</b></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><b>Saturday</b></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </table>
+                       
+                    </body>
+                    
+                    </html></textarea>
+            </div>
+        </div>
+        <div class="output-part">
+            <div class="output-title">
+                <h2>Output:</h2>
+            </div>
+            <iframe class="output-body" id="preview">
+                <!-- body of output -->
+            </iframe>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="control">
+            <a href="#">Back | </a>
+            <a href="#">Next</a>
+        </div>
+        <div class="home"><a href="#">Index</a></div>
+    </div>
+    <script src="./themeScript.js"></script>
+</body>
+
+</html>
