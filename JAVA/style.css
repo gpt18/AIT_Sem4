@@ -1,5 +1,34 @@
  * {
      margin: 0;
+     font-family: google sans;
+ }
+ 
+ body {
+     background: rgba(30, 30, 30, 0.3);
+ }
+ 
+ h3 {
+     font-weight: 500;
+     font-size: 20px;
+     border-bottom: 2px solid #c7c6c6;
+     padding: 8px;
+     margin: 0;
+     background: rgba(0, 0, 0, 0.1);
+ }
+ 
+ h4 {
+     padding: 8px;
+     font-weight: 500;
+     font-size: 16px;
+ }
+ 
+ .hr {
+     width: 100%;
+     border-bottom: 2px solid #c7c6c6;
+ }
+ 
+ code {
+     padding: 8px;
  }
  
  .main {
@@ -14,37 +43,82 @@
      top: 0;
      padding: 8px;
      color: white;
-     font-size: x-large;
-     font-weight: 500;
+     font-size: 1.5rem;
+     font-weight: bold;
+     line-height: 1.4rem;
      background-color: #4158D0;
      background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
      grid-area: header;
  }
  
+ .menu a {
+     text-decoration: none;
+     font-size: small;
+     color: yellow;
+ }
+ 
  .index {
-     border: 1px solid black;
      grid-area: index;
+     margin: 0;
+     padding: 1rem;
      display: flex;
      flex-direction: column;
+     align-items: center;
+     background: rgb(248, 248, 144);
+     border-bottom: 2px solid blueviolet;
+     border-radius: 0 0 10px 10px;
+ }
+ 
+ .index a {
+     text-decoration: none;
  }
  
  .container {
      width: 100%;
+     margin-bottom: 50px;
      display: flex;
      flex-direction: column;
-     border: 1px solid black;
      grid-area: container;
+     gap: 10px;
  }
  
  .item {
-     border: 1px solid blue;
+     padding-bottom: 8px;
+     margin: 10px;
+     border: 1px solid #c7c6c6;
+     border-radius: 5px;
+     background: rgb(255, 255, 255);
+     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1);
  }
  
  @media (min-width: 960px) {
+     h3 {
+         font-weight: 500;
+         font-size: 24px;
+     }
+     h4 {
+         font-weight: 400;
+         font-size: 20px;
+     }
      .main {
          grid-template-rows: auto 1fr;
          grid-template-columns: 0.4fr 1fr;
          grid-template-areas: "header header " "index container";
      }
-     .index {}
+     .index {
+         height: 100%;
+         width: 23%;
+         position: fixed;
+         z-index: 1;
+         top: 73px;
+         left: 2rem;
+         border: 2px solid blueviolet;
+         border-radius: 5px;
+     }
+     .menu {
+         visibility: hidden;
+     }
+     .item {
+         margin: 8px 2rem 8px 8px;
+     }
  }
