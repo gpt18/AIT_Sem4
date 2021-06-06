@@ -1,3 +1,4 @@
+package files;
 public class array_5 {
     public static void main(String[] args) {
         int[] age={12,4,5,2,5};

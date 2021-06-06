@@ -1,3 +1,4 @@
+package files;
 class ProOneOutput{
   public static void main(String[] args)
   {

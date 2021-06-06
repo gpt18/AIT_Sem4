@@ -1,3 +1,4 @@
+package files;
 public class switchCase {
     public static void main(String[] args) {
         int day=6;
