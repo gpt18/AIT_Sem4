@@ -121,3 +121,14 @@
          margin: 8px 2rem 8px 8px;
      }
  }
+ 
+ .footer {
+     background-color: black;
+     color: white;
+     padding: 10px;
+ }
+ 
+ .footer a {
+     text-decoration: none;
+     color: #667fff;
+ }
