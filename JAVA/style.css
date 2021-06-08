@@ -92,7 +92,7 @@
  
  .code {
      margin: 0 8px 8px 8px;
-     padding-top: 10px;
+     padding: 10px 4px 10px 4px;
      border-radius: 8px;
      background-color: #1B1B1B;
      color: #C6AD66;
