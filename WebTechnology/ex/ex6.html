@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700|Google+Sans:400,500|Product+Sans:400&amp;lang=en" nonce="nn-BX9wpgvsKub2FgsgR_w">
+    <link rel="stylesheet" href="./themeStyle.css">
+    <title>Ex-2: </title>
+</head>
+
+<body>
+    <div class="header">
+        <h2>EX-12: title of experiment</h2>
+    </div>
+    <div class="main-container">
+        <div class="code-part">
+            <div class="code-title">
+                <h2>Code:</h2>
+                <button class="btn" onclick="showPreview()">Run</button> &#128072; click here!
+            </div>
+            <div class="code-body">
+                <textarea id="htmlCode" placeholder="HTML Code" oninput="showPreview()">
+                    <html>
+
+                        <body>
+                            <h1>HTML Phrase tag</h1>
+                            <h2>1- abbr </h2>
+                            <p>An <abbr title="Hypertext Markup language">HTML </abbr>language is used to create web pages. </p>
+                            <h2>2- span</h2>
+                            <p>My mother has <span style="color:blue">blue</span> eyes.</p>
+                            <h2>3- marked tag</h2>
+                            <p>This tag will <mark>highlight</mark> the text.</p>
+                            <h2>4- strong text</h2>
+                            <p>In HTML it is recommended to use <strong>lower-case</strong>, while writing a code. </p>
+                            <h2>5- emphasized text</h2>
+                            <p>HTML is an <em>easy </em>to learn language.</p>
+                            <h2>6- code</h2>
+                            <p>First Java program</p>
+                            <p><code>class Simple{ public static void main(String args[]){   
+                             System.out.println("Hello Java"); }} </code>
+                            </p>
+                            <h2>7- keyboard</h2>
+                            <p>Please press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>T</kbd> to restore page on chrome.</p>
+                            <h2>8- div</h2>
+                            <div>this is div content</div>
+                        </body>
+                        
+                        </html>
+                </textarea>
+            </div>
+        </div>
+        <div class="output-part">
+            <div class="output-title">
+                <h2>Output:</h2>
+            </div>
+            <iframe class="output-body" id="preview">
+                <!-- body of output -->
+            </iframe>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="control">
+            <a href="#">Back | </a>
+            <a href="#">Next</a>
+        </div>
+        <div class="home"><a href="../index.html">Index</a></div>
+    </div>
+    <script src="./themeScript.js"></script>
+</body>
+
+</html>

@@ -18,14 +18,35 @@
         <div class="code-part">
             <div class="code-title">
                 <h2>Code:</h2>
-                <button class="btn" onclick="showPreview()"><a href="#output-title">Run</a></button> &#128072; click here!
+                <button class="btn" onclick="showPreview()">Run</button> &#128072; click here!
             </div>
             <div class="code-body">
-                <textarea id="htmlCode" placeholder="HTML Code" oninput="showPreview()">hello world!</textarea>
+                <textarea id="htmlCode" placeholder="HTML Code" oninput="showPreview()">
+                    <html>
+
+                        <body>
+                            <h1> iframe </h1>
+                            <hr>
+                            <p>An iframe with default borders:</p>
+                            <iframe src="https://www.github.com" width="100%" height="300">
+                        </iframe>
+                        
+                            <p>An iframe with a thin black border:</p>
+                            <iframe src="https://www.google.com/" width="100%" height="300" style="border:1px solid black;">
+                        </iframe>
+                        
+                            <p>An iframe with no borders:</p>
+                            <iframe src="https://www.cowin.gov.in/home" width="100%" height="300" style="border:none;">
+                        </iframe>
+                        
+                        </body>
+                        
+                        </html>
+                </textarea>
             </div>
         </div>
         <div class="output-part">
-            <div id="output-title" class="output-title">
+            <div class="output-title">
                 <h2>Output:</h2>
             </div>
             <iframe class="output-body" id="preview">

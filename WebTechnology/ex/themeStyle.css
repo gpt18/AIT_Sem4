@@ -5,7 +5,6 @@
 
 body {
     display: grid;
-    height: 100vh;
     margin: 0;
     grid-template-rows: auto 1fr auto;
     grid-template-areas: "header" "main" "footer";
@@ -74,11 +73,21 @@ h1 {
     .output-part {
         margin-right: 8px;
     }
+    .code-body,
+    .output-body {
+        height: 78vh;
+    }
+}
+
+@media (max-width: 960px) {
+    .code-body,
+    .output-body {
+        height: 90vh;
+    }
 }
 
 .code-body,
 .output-body {
-    height: 90%;
     padding: 8px;
     margin: 0 4px 0 4px;
     border: 2px solid purple;
