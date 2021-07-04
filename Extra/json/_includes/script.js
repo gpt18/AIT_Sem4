@@ -1,4 +1,5 @@
-fetch('./_includes/data.json')
+// ./_includes/data.json
+fetch('https://gpt18.github.io/BCA_Sem4/Extra/json/_includes/data.json')
     .then(function(response) {
         return response.json();
     })
