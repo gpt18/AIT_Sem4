@@ -1,5 +1,6 @@
 // ./_includes/data.json
-fetch('https://gpt18.github.io/BCA_Sem4/Extra/json/_includes/data.json')
+// https://drive.google.com/file/d/127efc5d3eabwFsaj2ESdZYhh0xtOnHWs/view?usp=sharing
+fetch('./_includes/data.json')
     .then(function(response) {
         return response.json();
     })
