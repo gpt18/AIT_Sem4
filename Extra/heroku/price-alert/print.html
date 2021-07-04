@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function PrintDiv() {
+            var divContents = document.getElementById("pnt").innerHTML;
+            var printWindow = window.open('', '', 'height=200,width=400');
+            printWindow.document.write('<html><head><title>Print DIV Content</title>');
+            printWindow.document.write('</head><body >');
+            printWindow.document.write(divContents);
+            printWindow.document.write('</body></html>');
+            printWindow.document.close();
+            printWindow.print();
+        }
+    </script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="item">
+            <div class="title">
+                <h1>1) Realme 8</h1>
+                <small>4GB 128GB variant</small>
+            </div>
+            <div class="item-body" id="pnt">
+                <div class="row">
+                    <div class="store">Official</div>
+                    <div class="price">14999</div>
+                    <div class="button">Check price</div>
+                </div>
+                <div class="row">
+                    <div class="store">Amazon</div>
+                    <div class="price">14999</div>
+                    <div class="button">Check price</div>
+                </div>
+                <div class="row">
+                    <div class="store">Flipkart</div>
+                    <div class="price">14999</div>
+                    <div class="button">Check price</div>
+                </div>
+                <div class="row">
+                    <div class="store">Other</div>
+                    <div class="price">14999</div>
+                    <div class="button">Check price</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="button" onclick="PrintDiv();" value="Print" />
+</body>
+
+</html>
